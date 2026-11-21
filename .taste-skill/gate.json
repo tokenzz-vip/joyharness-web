@@ -1,0 +1,1470 @@
+{
+ "start": "2026-11-20T17:24:31.474Z",
+ "round": 1,
+ "idle": 0,
+ "errors": 0,
+ "status": "fail",
+ "history": [
+  {
+   "at": "2026-11-20T17:31:30.816Z",
+   "mode": "manual",
+   "status": "fail",
+   "fails": 37,
+   "round": 1,
+   "reused": false,
+   "stopHookActive": false
+  }
+ ],
+ "max": 3,
+ "marker": {
+  "page": "index.html",
+  "url": null,
+  "root": null,
+  "kind": "software",
+  "category": "Joy-Con 按键映射应用",
+  "primary": "下载 macOS 版",
+  "rounds": 3,
+  "start": "2026-11-20T17:24:31.474Z",
+  "by": "gate.mjs --start"
+ },
+ "manual": true,
+ "roundKey": "daa1b9affb132aa7:da39a3ee",
+ "roundFree": false,
+ "idleFree": false,
+ "blockKey": null,
+ "fp": "daa1b9affb132aa7",
+ "page": "index.html",
+ "found": {
+  "fails": [
+   {
+    "check": "no-visual",
+    "where": "section#controllers \"两代 Joy-Con 都能接入\"",
+    "msg": "no picture, effect or mock in this section; a feature section needs a visual",
+    "fix": "give the section a visual: a UI fragment on a ground, real icons, or a photograph that fits",
+    "widths": [
+     1440,
+     390
+    ],
+    "from": "consistency",
+    "ids": [
+     "no-visual"
+    ],
+    "wheres": [
+     "section#controllers \"两代 Joy-Con 都能接入\""
+    ]
+   },
+   {
+    "check": "heading-scale",
+    "where": "h2#features-title \"一只手柄，多套键位\"",
+    "msg": "h2 headings in 2 sizes, 42.4px (\"下载 JoyHarness\") to 56px (x1.32)",
+    "fix": "size headings by level: the h1 largest, one size per level, each level below the one above",
+    "widths": [
+     1440
+    ],
+    "from": "consistency",
+    "ids": [
+     "heading-scale"
+    ],
+    "wheres": [
+     "h2#features-title \"一只手柄，多套键位\""
+    ]
+   },
+   {
+    "check": "section-gaps",
+    "where": "main#main > section.download-section / footer.site-footer",
+    "msg": "76px between these sections, -65% against the median 218px",
+    "fix": "use one gap between sections (all within 25% of each other)",
+    "widths": [
+     1440
+    ],
+    "from": "consistency",
+    "ids": [
+     "section-gaps"
+    ],
+    "wheres": [
+     "main#main > section.download-section / footer.site-footer"
+    ]
+   },
+   {
+    "check": "section-tile",
+    "where": "section#features \"一只手柄，多套键位\"",
+    "msg": "the section is 967px tall (1.07 screens at 1440x900), not one screen or two: the screen one screen on from its top (scroll 1802px) shows none of it and 693px of the next section, its heading \"两代 Joy-Con 都能接入\" on screen",
+    "fix": "set every section after the hero to one screen or two (height: calc(var(--h,1) * 100vh)) and fit its content above --padb",
+    "widths": [
+     1440
+    ],
+    "from": "consistency",
+    "ids": [
+     "section-tile"
+    ],
+    "wheres": [
+     "section#features \"一只手柄，多套键位\""
+    ]
+   },
+   {
+    "check": "run-on",
+    "where": "h1#hero-title \"用 Joy-Con操作你的 AI\"",
+    "msg": "\"操作你的 | AI\": the heading runs its first sentence into the grey second one with no stop",
+    "fix": "end the heading's first sentence with a full stop before its grey second one (\"Rooms and prices. Breakfast included.\")",
+    "widths": [
+     1440
+    ],
+    "from": "consistency",
+    "ids": [
+     "run-on"
+    ],
+    "wheres": [
+     "h1#hero-title \"用 Joy-Con操作你的 AI\""
+    ]
+   },
+   {
+    "check": "hero-enter",
+    "where": "main#main > section.hero",
+    "msg": "the hero does not enter on load: no head line setting html.m-enter (motion.md, The hero's entrance)",
+    "fix": "put data-enter on the hero <section> and keep the head line from starter.html that sets html.m-enter",
+    "widths": [
+     1440
+    ],
+    "from": "consistency",
+    "ids": [
+     "hero-enter"
+    ],
+    "wheres": [
+     "main#main > section.hero"
+    ]
+   },
+   {
+    "check": "moment-none",
+    "where": "(the page)",
+    "msg": "a software page (--type) deals no moment: every kind carries one, two on a long page (moments.md)",
+    "fix": "deal one (moments.mjs pick --page software) and mount it in its own section",
+    "widths": [
+     1440
+    ],
+    "from": "consistency",
+    "ids": [
+     "moment-none"
+    ],
+    "wheres": [
+     "(the page)"
+    ]
+   },
+   {
+    "check": "hero-screen",
+    "where": "main#main > section.hero \"macOS 菜单栏应用 用 Joy-Con操作你的 AI 按一下发送消息、切换应\"",
+    "msg": "the hero ends at 902px on a 900px screen, 2px below the fold: it ends at the fold, 1px either way (SR-1)",
+    "fix": "make the hero exactly one screen (height: 100svh, its content fitted inside), never taller or shorter",
+    "widths": [
+     1440
+    ],
+    "from": "consistency",
+    "ids": [
+     "hero-screen"
+    ],
+    "wheres": [
+     "main#main > section.hero \"macOS 菜单栏应用 用 Joy-Con操作你的 AI 按一下发送消息、切换应\""
+    ]
+   },
+   {
+    "check": "section-height",
+    "where": "footer.site-footer \"JoyHarness Tokenzz MIT 许可证 反馈问题\"",
+    "msg": "the section is 83px tall (0.1 screens), 817px short of one screen (900px): every section after the hero is one screen or two, 2px either way (SR-2)",
+    "fix": "set the section to one screen or two (height: calc(var(--h,1) * 100vh), --h 1 or 2) and cut or split its content to fit",
+    "widths": [
+     1440
+    ],
+    "from": "consistency",
+    "ids": [
+     "section-height"
+    ],
+    "wheres": [
+     "footer.site-footer \"JoyHarness Tokenzz MIT 许可证 反馈问题\""
+    ]
+   },
+   {
+    "check": "section-height",
+    "where": "main#main > section.download-section \"下载 JoyHarnessApple Silicon · macOS 15 或更\"",
+    "msg": "the section is 183px tall (0.2 screens), 717px short of one screen (900px): every section after the hero is one screen or two, 2px either way (SR-2)",
+    "fix": "set the section to one screen or two (height: calc(var(--h,1) * 100vh), --h 1 or 2) and cut or split its content to fit",
+    "widths": [
+     1440
+    ],
+    "from": "consistency",
+    "ids": [
+     "section-height"
+    ],
+    "wheres": [
+     "main#main > section.download-section \"下载 JoyHarnessApple Silicon · macOS 15 或更\""
+    ]
+   },
+   {
+    "check": "section-height",
+    "where": "section#faq \"常见问题从配对到按键映射的完整步骤见使用指南。打开使用指南 ↗ 需要什么样的 M\"",
+    "msg": "the section is 489px tall (0.5 screens), 411px short of one screen (900px): every section after the hero is one screen or two, 2px either way (and 2 more like it: \"两代 Joy-Con 都能接入 左右手柄均可独立\", \"一只手柄，多套键位 在 ChatGPT 里发送消\") (SR-2)",
+    "fix": "set the section to one screen or two (height: calc(var(--h,1) * 100vh), --h 1 or 2) and cut or split its content to fit",
+    "widths": [
+     1440,
+     390
+    ],
+    "from": "consistency",
+    "ids": [
+     "section-height",
+     "screen-short",
+     "screen-height"
+    ],
+    "wheres": [
+     "section#faq \"常见问题从配对到按键映射的完整步骤见使用指南。打开使用指南 ↗ 需要什么样的 M\"",
+     "#faq section.section \"常见问题从配对到按键映射的完整步骤见使用指南。打开使用指南 ↗ \""
+    ]
+   },
+   {
+    "check": "one-section",
+    "where": "h2#faq-title \"常见问题\"",
+    "msg": "the screen at scroll 1869px (the top of section 3) shows 201px of section 4 and the heading of section 4 whole and the content of 2 sections, over 24px each beside section 3: a screen shows one section (another may peek 8px, 24px WARN) (SR-4)",
+    "fix": "make each section exactly one screen or two, so a screen shows one section and no neighbour peeks",
+    "widths": [
+     1440
+    ],
+    "from": "consistency",
+    "ids": [
+     "one-section"
+    ],
+    "wheres": [
+     "h2#faq-title \"常见问题\""
+    ]
+   },
+   {
+    "check": "one-section",
+    "where": "h2#download-title \"下载 JoyHarness\"",
+    "msg": "the screen at scroll 2424px (the top of section 4) shows 183px of section 5 and the heading of section 5 whole and the content of 3 sections, over 24px each beside section 4: a screen shows one section (another may peek 8px, 24px WARN) (SR-4)",
+    "fix": "make each section exactly one screen or two, so a screen shows one section and no neighbour peeks",
+    "widths": [
+     1440
+    ],
+    "from": "consistency",
+    "ids": [
+     "one-section"
+    ],
+    "wheres": [
+     "h2#download-title \"下载 JoyHarness\""
+    ]
+   },
+   {
+    "check": "one-section",
+    "where": "section#faq \"常见问题从配对到按键映射的完整步骤见使用指南。打开使用指南 ↗ 需要什么样的 M\"",
+    "msg": "the screen at scroll 1800px (stride 2) shows 132px of section 4 beside section 3: a screen shows one section (another may peek 8px, 24px WARN) (and 1 more like it: scroll 73px) (SR-4)",
+    "fix": "make each section exactly one screen or two, so a screen shows one section and no neighbour peeks",
+    "widths": [
+     1440,
+     390
+    ],
+    "from": "consistency",
+    "ids": [
+     "one-section",
+     "neighbour"
+    ],
+    "wheres": [
+     "section#faq \"常见问题从配对到按键映射的完整步骤见使用指南。打开使用指南 ↗ 需要什么样的 M\"",
+     "#faq section.section \"常见问题从配对到按键映射的完整步骤见使用指南。打开使用指南 ↗ \""
+    ]
+   },
+   {
+    "check": "one-heading",
+    "where": "h2#faq-title \"常见问题\"",
+    "msg": "headings of two sections show whole on one screen at 4 of 49 scroll positions (8.2%; at scroll 1900, 2300, 2350, 2400px), here with \"两代 Joy-Con 都能接入\": at most 3% on a desktop (SR-5)",
+    "fix": "make the sections one screen tall so their headings sit a screen apart and two never share one",
+    "widths": [
+     1440
+    ],
+    "from": "consistency",
+    "ids": [
+     "one-heading"
+    ],
+    "wheres": [
+     "h2#faq-title \"常见问题\""
+    ]
+   },
+   {
+    "check": "container-edges",
+    "where": "a.skip-link \"跳到正文\"",
+    "msg": "a <a> at the top of the page, outside header.nav, main, footer.closing and nav.actionbar (SR-6)",
+    "fix": "build the page as header.nav, a main of sections (each one in-flow .wrap plus background layers) and footer.closing",
+    "widths": [
+     1440
+    ],
+    "from": "consistency",
+    "ids": [
+     "container-edges"
+    ],
+    "wheres": [
+     "a.skip-link \"跳到正文\""
+    ]
+   },
+   {
+    "check": "container-edges",
+    "where": "header.site-header \"JoyHarness 菜单 功能 手柄支持 使用指南 常见问题 GitHub ☾\"",
+    "msg": "a <header> at the top of the page, outside header.nav, main, footer.closing and nav.actionbar (SR-6)",
+    "fix": "build the page as header.nav, a main of sections (each one in-flow .wrap plus background layers) and footer.closing",
+    "widths": [
+     1440
+    ],
+    "from": "consistency",
+    "ids": [
+     "container-edges"
+    ],
+    "wheres": [
+     "header.site-header \"JoyHarness 菜单 功能 手柄支持 使用指南 常见问题 GitHub ☾\""
+    ]
+   },
+   {
+    "check": "container-edges",
+    "where": "footer.site-footer \"JoyHarness Tokenzz MIT 许可证 反馈问题\"",
+    "msg": "a <footer> at the top of the page, outside header.nav, main, footer.closing and nav.actionbar (and 1 more like it: \"macOS 菜单栏应用 用 Joy-Con操作你\") (SR-6)",
+    "fix": "build the page as header.nav, a main of sections (each one in-flow .wrap plus background layers) and footer.closing",
+    "widths": [
+     1440
+    ],
+    "from": "consistency",
+    "ids": [
+     "container-edges"
+    ],
+    "wheres": [
+     "footer.site-footer \"JoyHarness Tokenzz MIT 许可证 反馈问题\""
+    ]
+   },
+   {
+    "check": "container-edges",
+    "where": "div.hero-visual > div.app-frame > div.window-bar > span:nth-of-type(2) \"JoyHarness\"",
+    "msg": "1 text block starts on a left line at x 954, 858px from the container's left: text starts on the container's left, or on one split line (x 626, 732, 838) (SR-6)",
+    "fix": "start the text on the container's left, or on the one split line every split shares",
+    "widths": [
+     1440
+    ],
+    "from": "consistency",
+    "ids": [
+     "container-edges"
+    ],
+    "wheres": [
+     "div.hero-visual > div.app-frame > div.window-bar > span:nth-of-type(2) \"JoyHarness\""
+    ]
+   },
+   {
+    "check": "split-pair",
+    "where": "main#main > section.hero > div.wrap.hero-inner > div.hero-layout \"macOS 菜单栏应用 用 Joy-Con操作你的 AI 按一下发送消息、切换应\"",
+    "msg": "the two columns of the split start 63px apart at the top (centred on each other): a split's columns are top-aligned, 8px either way (SR-8)",
+    "fix": "top-align both columns of the split (align-items: start)",
+    "widths": [
+     1440
+    ],
+    "from": "consistency",
+    "ids": [
+     "split-pair"
+    ],
+    "wheres": [
+     "main#main > section.hero > div.wrap.hero-inner > div.hero-layout \"macOS 菜单栏应用 用 Joy-Con操作你的 AI 按一下发送消息、切换应\""
+    ]
+   },
+   {
+    "check": "split-pair",
+    "where": "section#features > div.wrap > div.feature-layout \"应用绑定 组合动作 连接与摇杆 按键手势为单击、双击和长按分别绑定快捷键、鼠标动\"",
+    "msg": "the split's left column starts with a picture or a box, not text: text left, the visual right, on every split (SR-8)",
+    "fix": "put the text in the left column and the visual in the right, on every split",
+    "widths": [
+     1440
+    ],
+    "from": "consistency",
+    "ids": [
+     "split-pair"
+    ],
+    "wheres": [
+     "section#features > div.wrap > div.feature-layout \"应用绑定 组合动作 连接与摇杆 按键手势为单击、双击和长按分别绑定快捷键、鼠标动\""
+    ]
+   },
+   {
+    "check": "split-pair",
+    "where": "section#faq > div.wrap.faq-layout \"常见问题从配对到按键映射的完整步骤见使用指南。打开使用指南 ↗ 需要什么样的 M\"",
+    "msg": "the split's columns are off the page's one pair of lines: its right column starts at x 585, the first split's at 631; its right column starts at x 585, on none of the split lines 626 (k=5), 732 (k=6), 838 (k=7) (SR-8)",
+    "fix": "start every split's right column on one shared line (wrap.left + k x (width + 24) / 12, k 5, 6 or 7; 6 on a place page) and end the left one 24px before it",
+    "widths": [
+     1440
+    ],
+    "from": "consistency",
+    "ids": [
+     "split-pair"
+    ],
+    "wheres": [
+     "section#faq > div.wrap.faq-layout \"常见问题从配对到按键映射的完整步骤见使用指南。打开使用指南 ↗ 需要什么样的 M\""
+    ]
+   },
+   {
+    "check": "text-only",
+    "where": "section#faq \"常见问题\"",
+    "msg": "the section is only text: no picture, icon, mock or effect in it (2 sections like it at this width)",
+    "fix": "give the section a visual: a photograph that fits, the real icons, or a UI fragment on a ground",
+    "widths": [
+     390
+    ],
+    "from": "consistency",
+    "ids": [
+     "text-only"
+    ],
+    "wheres": [
+     "section#faq \"常见问题\""
+    ]
+   },
+   {
+    "check": "text-only",
+    "where": "main#main > section.download-section \"下载 JoyHarness\"",
+    "msg": "the closing section is only text: no picture, icon, mock or effect in it (2 sections like it at this width)",
+    "fix": "give the section a visual: a photograph that fits, the real icons, or a UI fragment on a ground",
+    "widths": [
+     390
+    ],
+    "from": "consistency",
+    "ids": [
+     "text-only"
+    ],
+    "wheres": [
+     "main#main > section.download-section \"下载 JoyHarness\""
+    ]
+   },
+   {
+    "check": "edge-left",
+    "where": "section.hero ul.app-list \"ChatGPT Claude Cursor DeepSeek W\"",
+    "msg": "starts at x 590.6; the lines are 96 and the column starts",
+    "fix": "start it on the .wrap left line",
+    "widths": [
+     1440
+    ],
+    "from": "layout",
+    "ids": [
+     "edge-left"
+    ],
+    "wheres": [
+     "section.hero ul.app-list \"ChatGPT Claude Cursor DeepSeek W\""
+    ]
+   },
+   {
+    "check": "edge-left",
+    "where": "#faq div.faq-list \"需要什么样的 Mac？ 目前提供 Apple Silicon（M\"",
+    "msg": "starts at x 585.3; the lines are 96 and the column starts",
+    "fix": "start it on the .wrap left line",
+    "widths": [
+     1440
+    ],
+    "from": "layout",
+    "ids": [
+     "edge-left"
+    ],
+    "wheres": [
+     "#faq div.faq-list \"需要什么样的 Mac？ 目前提供 Apple Silicon（M\""
+    ]
+   },
+   {
+    "check": "edge-right",
+    "where": "footer.site-footer a.brand \"JoyHarness\"",
+    "msg": "ends at x 232; the right line is 1344",
+    "fix": "end it on the .wrap right line",
+    "widths": [
+     1440,
+     390
+    ],
+    "from": "layout",
+    "ids": [
+     "edge-right"
+    ],
+    "wheres": [
+     "footer.site-footer a.brand \"JoyHarness\""
+    ]
+   },
+   {
+    "check": "edge-left",
+    "where": "footer.site-footer nav \"Tokenzz MIT 许可证 反馈问题\"",
+    "msg": "starts at x 1115.7; the lines are 96 and the column starts",
+    "fix": "start it on the .wrap left line",
+    "widths": [
+     1440
+    ],
+    "from": "layout",
+    "ids": [
+     "edge-left"
+    ],
+    "wheres": [
+     "footer.site-footer nav \"Tokenzz MIT 许可证 反馈问题\""
+    ]
+   },
+   {
+    "check": "screen-short",
+    "where": "section.hero section.hero \"macOS 菜单栏应用 用 Joy-Con操作你的 AI 按一下\"",
+    "msg": "829px tall; one screen under the nav is 900px",
+    "fix": "make the section one full screen (--h: 1, layout-v4.md section 2)",
+    "widths": [
+     1440
+    ],
+    "from": "layout",
+    "ids": [
+     "screen-short"
+    ],
+    "wheres": [
+     "section.hero section.hero \"macOS 菜单栏应用 用 Joy-Con操作你的 AI 按一下\""
+    ]
+   },
+   {
+    "check": "screen-height",
+    "where": "#features section.section.feature-section \"一只手柄，多套键位 在 ChatGPT 里发送消息，切到 Cur\"",
+    "msg": "967px, 1.07 screens; a section is exactly one or two (--h)",
+    "fix": "make the section exactly one or two screens (--h: 1 or 2)",
+    "widths": [
+     1440
+    ],
+    "from": "layout",
+    "ids": [
+     "screen-height"
+    ],
+    "wheres": [
+     "#features section.section.feature-section \"一只手柄，多套键位 在 ChatGPT 里发送消息，切到 Cur\""
+    ]
+   },
+   {
+    "check": "screen-short",
+    "where": "#controllers section.section.controller-section \"两代 Joy-Con 都能接入 左右手柄均可独立连接。连了多只手\"",
+    "msg": "699px tall; one screen under the nav is 900px",
+    "fix": "make the section one full screen (--h: 1, layout-v4.md section 2)",
+    "widths": [
+     1440,
+     390
+    ],
+    "from": "layout",
+    "ids": [
+     "screen-short",
+     "screen-height"
+    ],
+    "wheres": [
+     "#controllers section.section.controller-section \"两代 Joy-Con 都能接入 左右手柄均可独立连接。连了多只手\""
+    ]
+   },
+   {
+    "check": "neighbour",
+    "where": "#controllers section.section.controller-section \"两代 Joy-Con 都能接入 左右手柄均可独立连接。连了多只手\"",
+    "msg": "framed, 67px of #faq section.section \"常见问题从配对到按键映射的完整步骤见使用指南。打开使用指南 ↗ \" shows",
+    "fix": "keep the next section's heading and picture out of this screen",
+    "widths": [
+     1440
+    ],
+    "from": "layout",
+    "ids": [
+     "neighbour"
+    ],
+    "wheres": [
+     "#controllers section.section.controller-section \"两代 Joy-Con 都能接入 左右手柄均可独立连接。连了多只手\""
+    ]
+   },
+   {
+    "check": "screen-short",
+    "where": "section.download-section section.download-section \"下载 JoyHarnessApple Silicon · mac\"",
+    "msg": "183px tall; one screen under the nav is 900px",
+    "fix": "make the section one full screen (--h: 1, layout-v4.md section 2)",
+    "widths": [
+     1440,
+     390
+    ],
+    "from": "layout",
+    "ids": [
+     "screen-short"
+    ],
+    "wheres": [
+     "section.download-section section.download-section \"下载 JoyHarnessApple Silicon · mac\""
+    ]
+   },
+   {
+    "check": "screen-height",
+    "where": "section.download-section section.download-section \"下载 JoyHarnessApple Silicon · mac\"",
+    "msg": "183px, 0.20 screens; a section is exactly one or two (--h)",
+    "fix": "make the section exactly one or two screens (--h: 1 or 2)",
+    "widths": [
+     1440,
+     390
+    ],
+    "from": "layout",
+    "ids": [
+     "screen-height"
+    ],
+    "wheres": [
+     "section.download-section section.download-section \"下载 JoyHarnessApple Silicon · mac\""
+    ]
+   },
+   {
+    "check": "sparse",
+    "where": "section.download-section section.download-section \"下载 JoyHarnessApple Silicon · mac\"",
+    "msg": "its content fills 49% of its screen; merge it or give it its visual (0.55 is the aim)",
+    "fix": "fill the section or make it a screen shorter",
+    "widths": [
+     1440
+    ],
+    "from": "layout",
+    "ids": [
+     "sparse"
+    ],
+    "wheres": [
+     "section.download-section section.download-section \"下载 JoyHarnessApple Silicon · mac\""
+    ]
+   },
+   {
+    "check": "neighbour",
+    "where": "section.download-section section.download-section \"下载 JoyHarnessApple Silicon · mac\"",
+    "msg": "framed, 83px of the footer shows",
+    "fix": "keep the next section's heading and picture out of this screen",
+    "widths": [
+     1440,
+     390
+    ],
+    "from": "layout",
+    "ids": [
+     "neighbour"
+    ],
+    "wheres": [
+     "section.download-section section.download-section \"下载 JoyHarnessApple Silicon · mac\""
+    ]
+   },
+   {
+    "check": "hero-fold",
+    "where": "section.hero section.hero \"macOS 菜单栏应用 用 Joy-Con操作你的 AI 按一下\"",
+    "msg": "starts at y 73, not under the nav",
+    "fix": "the hero fills the first screen alone, its button inside it",
+    "widths": [
+     1440,
+     390
+    ],
+    "from": "layout",
+    "ids": [
+     "hero-fold"
+    ],
+    "wheres": [
+     "section.hero section.hero \"macOS 菜单栏应用 用 Joy-Con操作你的 AI 按一下\""
+    ]
+   }
+  ],
+  "warns": [
+   {
+    "check": "flush",
+    "where": "div.app-strip > ul.app-list > li:nth-of-type(1) > img \"img: chatgpt.webp\"",
+    "msg": "its last line sits 23px above the lower edge of section.hero, where the ground changes to section#features",
+    "fix": "give the section its padding at the edge where the ground changes (the closing call keeps a clear gap above the footer)",
+    "widths": [
+     1440
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "flush",
+    "where": "footer.site-footer > div.wrap.footer-inner > a.brand > img \"img: app-icon.webp\"",
+    "msg": "its first line sits 26px under the top edge of footer.site-footer, where the ground changes",
+    "fix": "give the section its padding at the edge where the ground changes (the closing call keeps a clear gap above the footer)",
+    "widths": [
+     1440,
+     390
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "text-only",
+    "where": "section#faq \"常见问题\"",
+    "msg": "the section is only text: no picture, icon, mock or effect in it",
+    "fix": "give the section a visual: a photograph that fits, the real icons, or a UI fragment on a ground",
+    "widths": [
+     1440
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "copy-buttons",
+    "where": "div.hero-layout > div.hero-copy > div.actions > a.button:nth-of-type(1) \"下载 macOS 版 ↓\"",
+    "msg": "\"下载 macOS 版 ↓\" does not start with a verb (book, buy, try, start, get, see...) (and 1 more like it: \"下载 DMG ↓\")",
+    "fix": "label buttons with a verb and what the visitor gets (\"Book a room\", \"Start free trial\")",
+    "widths": [
+     1440
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "copy-actions",
+    "where": "header.site-header > div.wrap.header-inner > div.header-actions > a.button.button-small \"下载\"",
+    "msg": "3 labels for one target /tokenzz-vip/JoyHarness/releases/latest/download/JoyHarness-macos-arm64.dmg: \"下载\", \"下载 macOS 版 ↓\", \"下载 DMG ↓\"",
+    "fix": "few actions, one wording: at most 2 in the hero, the main action word for word in nav, hero and close",
+    "widths": [
+     1440
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "copy-actions",
+    "where": "(the page)",
+    "msg": "the main action \"下载 macOS 版\" does not read word for word the same in the closing section",
+    "fix": "few actions, one wording: at most 2 in the hero, the main action word for word in nav, hero and close",
+    "widths": [
+     1440
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "col-edge",
+    "where": "section#features > div.wrap > div.feature-layout > div.feature-screens",
+    "msg": "the second column starts at 3 places: 585px (section#features, section#faq), 631px (section.hero), 728px (section#controllers)",
+    "fix": "start the second column of every split on the same one or two grid columns",
+    "widths": [
+     1440
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "section-gaps",
+    "where": "main#main > section.hero / section#features",
+    "msg": "uneven space at the edge of a band: 122px outside its edge, 23px inside it (the space on either side of a change of ground reads as one gap only when the two match)",
+    "fix": "use one gap between sections (all within 25% of each other)",
+    "widths": [
+     1440,
+     390
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "nav-family",
+    "where": "header.site-header",
+    "msg": "the nav's links come in 2 sizes (14, 22px)",
+    "fix": "keep one nav on every screen: the same bar, fill, links and type",
+    "widths": [
+     1440,
+     390
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "stranded-action",
+    "where": "section.download-section > div.wrap.download-layout > div.actions > a.button:nth-of-type(1) \"下载 DMG ↓\"",
+    "msg": "stands 646px across from the nearest text of its block (\"下载 JoyHarness\") (and 1 more like it: \"查看版本记录 ↗\")",
+    "fix": "put the button under or beside the text it belongs to",
+    "widths": [
+     1440
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "nav-current",
+    "where": "header.site-header",
+    "msg": "the nav stays on screen with 3 links to the page's sections, but never marks the one you are in (no link changes as the page scrolls)",
+    "fix": "mark the link of the section on screen (a colour, a weight or a line under it) as the visitor scrolls",
+    "widths": [
+     1440
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "split-align",
+    "where": "main#main > section.hero > div.wrap.hero-inner > div.hero-layout \"macOS 菜单栏应用 用 Joy-Con 操作你的 AI 按一下发送消息、切换\"",
+    "msg": "the splits sit two ways: 1 to the middle of the taller side (\"macOS 菜单栏应用 用 Joy-Con \"); 1 to the top of the taller side (\"按键手势\")",
+    "fix": "set every split one way: the text to the top of its visual, or every one centred on it",
+    "widths": [
+     1440
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "one-screen",
+    "where": "section#faq \"常见问题\"",
+    "msg": "1 section is shorter than the screen, so the next one's heading or picture shows with it: \"常见问题\" is 489px of the 827px under the nav, and \"下载 JoyHarness\" shows below it",
+    "fix": "give each section the screen (min-height: 100svh less the nav, its content centred), or join two short ones into one",
+    "widths": [
+     1440
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "skip-link",
+    "where": "a.skip-link \"跳到正文\"",
+    "msg": "the first Tab stop is \"跳到正文\", not a skip link: a keyboard user tabs through the whole nav on every visit",
+    "fix": "add the starter's skip link as the header's first child: <a class=\"skip-link\" href=\"#top\">Skip to content</a>",
+    "widths": [
+     1440
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "share-meta",
+    "where": "head",
+    "msg": "the head lacks theme-color: a shared link shows no picture or title of its own",
+    "fix": "copy the head block of starter.html: og tags, twitter:card, the icon and theme-color (references/system.md, Head)",
+    "widths": [
+     1440
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "section-air",
+    "where": "section#faq \"常见问题从配对到按键映射的完整步骤见使用指南。打开使用指南 ↗ 需要什么样的 M\"",
+    "msg": "the content fills 45.5% of the section's height (223 of 489px): 55% or more (40% WARN) (SR-3)",
+    "fix": "fill the section to 55%: more content, a picture or a background layer, or merge it into the section above as its last block",
+    "widths": [
+     1440
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "section-air",
+    "where": "main#main > section.download-section \"下载 JoyHarnessApple Silicon · macOS 15 或更\"",
+    "msg": "the content fills 46.8% of the section's height (86 of 183px): 55% or more (40% WARN) (SR-3)",
+    "fix": "fill the section to 55%: more content, a picture or a background layer, or merge it into the section above as its last block",
+    "widths": [
+     1440
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "nav",
+    "where": "header.site-header > div.wrap.header-inner > a.brand \"JoyHarness\"",
+    "msg": "the nav is lopsided: its first item starts 8px outside the content's edge (20px), while its last ends on the other edge",
+    "fix": "start the nav's first item and end its last on the content's two edges",
+    "widths": [
+     390
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "heading-scale",
+    "where": "div.wrap > div.controller-grid > article.controller-card.controller-first > h3 \"Joy-Con\"",
+    "msg": "h3 headings in 2 sizes, 20px (\"按键手势\") to 25.6px (x1.28)",
+    "fix": "size headings by level: the h1 largest, one size per level, each level below the one above",
+    "widths": [
+     390
+    ],
+    "from": "consistency"
+   },
+   {
+    "check": "section-gaps",
+    "where": "main#main > section.download-section / footer.site-footer",
+    "msg": "65px between these sections, -51% against the median 133px",
+    "fix": "use one gap between sections (all within 25% of each other)",
+    "widths": [
+     390
+    ],
+    "from": "consistency"
+   }
+  ],
+  "crashed": [],
+  "seconds": {
+   "consistency": 96,
+   "layout": 15
+  }
+ },
+ "open": [
+  {
+   "check": "no-visual",
+   "where": "section#controllers \"两代 Joy-Con 都能接入\"",
+   "msg": "no picture, effect or mock in this section; a feature section needs a visual",
+   "fix": "give the section a visual: a UI fragment on a ground, real icons, or a photograph that fits",
+   "widths": [
+    1440,
+    390
+   ],
+   "from": "consistency",
+   "ids": [
+    "no-visual"
+   ],
+   "wheres": [
+    "section#controllers \"两代 Joy-Con 都能接入\""
+   ]
+  },
+  {
+   "check": "heading-scale",
+   "where": "h2#features-title \"一只手柄，多套键位\"",
+   "msg": "h2 headings in 2 sizes, 42.4px (\"下载 JoyHarness\") to 56px (x1.32)",
+   "fix": "size headings by level: the h1 largest, one size per level, each level below the one above",
+   "widths": [
+    1440
+   ],
+   "from": "consistency",
+   "ids": [
+    "heading-scale"
+   ],
+   "wheres": [
+    "h2#features-title \"一只手柄，多套键位\""
+   ]
+  },
+  {
+   "check": "section-gaps",
+   "where": "main#main > section.download-section / footer.site-footer",
+   "msg": "76px between these sections, -65% against the median 218px",
+   "fix": "use one gap between sections (all within 25% of each other)",
+   "widths": [
+    1440
+   ],
+   "from": "consistency",
+   "ids": [
+    "section-gaps"
+   ],
+   "wheres": [
+    "main#main > section.download-section / footer.site-footer"
+   ]
+  },
+  {
+   "check": "section-tile",
+   "where": "section#features \"一只手柄，多套键位\"",
+   "msg": "the section is 967px tall (1.07 screens at 1440x900), not one screen or two: the screen one screen on from its top (scroll 1802px) shows none of it and 693px of the next section, its heading \"两代 Joy-Con 都能接入\" on screen",
+   "fix": "set every section after the hero to one screen or two (height: calc(var(--h,1) * 100vh)) and fit its content above --padb",
+   "widths": [
+    1440
+   ],
+   "from": "consistency",
+   "ids": [
+    "section-tile"
+   ],
+   "wheres": [
+    "section#features \"一只手柄，多套键位\""
+   ]
+  },
+  {
+   "check": "run-on",
+   "where": "h1#hero-title \"用 Joy-Con操作你的 AI\"",
+   "msg": "\"操作你的 | AI\": the heading runs its first sentence into the grey second one with no stop",
+   "fix": "end the heading's first sentence with a full stop before its grey second one (\"Rooms and prices. Breakfast included.\")",
+   "widths": [
+    1440
+   ],
+   "from": "consistency",
+   "ids": [
+    "run-on"
+   ],
+   "wheres": [
+    "h1#hero-title \"用 Joy-Con操作你的 AI\""
+   ]
+  },
+  {
+   "check": "hero-enter",
+   "where": "main#main > section.hero",
+   "msg": "the hero does not enter on load: no head line setting html.m-enter (motion.md, The hero's entrance)",
+   "fix": "put data-enter on the hero <section> and keep the head line from starter.html that sets html.m-enter",
+   "widths": [
+    1440
+   ],
+   "from": "consistency",
+   "ids": [
+    "hero-enter"
+   ],
+   "wheres": [
+    "main#main > section.hero"
+   ]
+  },
+  {
+   "check": "moment-none",
+   "where": "(the page)",
+   "msg": "a software page (--type) deals no moment: every kind carries one, two on a long page (moments.md)",
+   "fix": "deal one (moments.mjs pick --page software) and mount it in its own section",
+   "widths": [
+    1440
+   ],
+   "from": "consistency",
+   "ids": [
+    "moment-none"
+   ],
+   "wheres": [
+    "(the page)"
+   ]
+  },
+  {
+   "check": "hero-screen",
+   "where": "main#main > section.hero \"macOS 菜单栏应用 用 Joy-Con操作你的 AI 按一下发送消息、切换应\"",
+   "msg": "the hero ends at 902px on a 900px screen, 2px below the fold: it ends at the fold, 1px either way (SR-1)",
+   "fix": "make the hero exactly one screen (height: 100svh, its content fitted inside), never taller or shorter",
+   "widths": [
+    1440
+   ],
+   "from": "consistency",
+   "ids": [
+    "hero-screen"
+   ],
+   "wheres": [
+    "main#main > section.hero \"macOS 菜单栏应用 用 Joy-Con操作你的 AI 按一下发送消息、切换应\""
+   ]
+  },
+  {
+   "check": "section-height",
+   "where": "footer.site-footer \"JoyHarness Tokenzz MIT 许可证 反馈问题\"",
+   "msg": "the section is 83px tall (0.1 screens), 817px short of one screen (900px): every section after the hero is one screen or two, 2px either way (SR-2)",
+   "fix": "set the section to one screen or two (height: calc(var(--h,1) * 100vh), --h 1 or 2) and cut or split its content to fit",
+   "widths": [
+    1440
+   ],
+   "from": "consistency",
+   "ids": [
+    "section-height"
+   ],
+   "wheres": [
+    "footer.site-footer \"JoyHarness Tokenzz MIT 许可证 反馈问题\""
+   ]
+  },
+  {
+   "check": "section-height",
+   "where": "main#main > section.download-section \"下载 JoyHarnessApple Silicon · macOS 15 或更\"",
+   "msg": "the section is 183px tall (0.2 screens), 717px short of one screen (900px): every section after the hero is one screen or two, 2px either way (SR-2)",
+   "fix": "set the section to one screen or two (height: calc(var(--h,1) * 100vh), --h 1 or 2) and cut or split its content to fit",
+   "widths": [
+    1440
+   ],
+   "from": "consistency",
+   "ids": [
+    "section-height"
+   ],
+   "wheres": [
+    "main#main > section.download-section \"下载 JoyHarnessApple Silicon · macOS 15 或更\""
+   ]
+  },
+  {
+   "check": "section-height",
+   "where": "section#faq \"常见问题从配对到按键映射的完整步骤见使用指南。打开使用指南 ↗ 需要什么样的 M\"",
+   "msg": "the section is 489px tall (0.5 screens), 411px short of one screen (900px): every section after the hero is one screen or two, 2px either way (and 2 more like it: \"两代 Joy-Con 都能接入 左右手柄均可独立\", \"一只手柄，多套键位 在 ChatGPT 里发送消\") (SR-2)",
+   "fix": "set the section to one screen or two (height: calc(var(--h,1) * 100vh), --h 1 or 2) and cut or split its content to fit",
+   "widths": [
+    1440,
+    390
+   ],
+   "from": "consistency",
+   "ids": [
+    "section-height",
+    "screen-short",
+    "screen-height"
+   ],
+   "wheres": [
+    "section#faq \"常见问题从配对到按键映射的完整步骤见使用指南。打开使用指南 ↗ 需要什么样的 M\"",
+    "#faq section.section \"常见问题从配对到按键映射的完整步骤见使用指南。打开使用指南 ↗ \""
+   ]
+  },
+  {
+   "check": "one-section",
+   "where": "h2#faq-title \"常见问题\"",
+   "msg": "the screen at scroll 1869px (the top of section 3) shows 201px of section 4 and the heading of section 4 whole and the content of 2 sections, over 24px each beside section 3: a screen shows one section (another may peek 8px, 24px WARN) (SR-4)",
+   "fix": "make each section exactly one screen or two, so a screen shows one section and no neighbour peeks",
+   "widths": [
+    1440
+   ],
+   "from": "consistency",
+   "ids": [
+    "one-section"
+   ],
+   "wheres": [
+    "h2#faq-title \"常见问题\""
+   ]
+  },
+  {
+   "check": "one-section",
+   "where": "h2#download-title \"下载 JoyHarness\"",
+   "msg": "the screen at scroll 2424px (the top of section 4) shows 183px of section 5 and the heading of section 5 whole and the content of 3 sections, over 24px each beside section 4: a screen shows one section (another may peek 8px, 24px WARN) (SR-4)",
+   "fix": "make each section exactly one screen or two, so a screen shows one section and no neighbour peeks",
+   "widths": [
+    1440
+   ],
+   "from": "consistency",
+   "ids": [
+    "one-section"
+   ],
+   "wheres": [
+    "h2#download-title \"下载 JoyHarness\""
+   ]
+  },
+  {
+   "check": "one-section",
+   "where": "section#faq \"常见问题从配对到按键映射的完整步骤见使用指南。打开使用指南 ↗ 需要什么样的 M\"",
+   "msg": "the screen at scroll 1800px (stride 2) shows 132px of section 4 beside section 3: a screen shows one section (another may peek 8px, 24px WARN) (and 1 more like it: scroll 73px) (SR-4)",
+   "fix": "make each section exactly one screen or two, so a screen shows one section and no neighbour peeks",
+   "widths": [
+    1440,
+    390
+   ],
+   "from": "consistency",
+   "ids": [
+    "one-section",
+    "neighbour"
+   ],
+   "wheres": [
+    "section#faq \"常见问题从配对到按键映射的完整步骤见使用指南。打开使用指南 ↗ 需要什么样的 M\"",
+    "#faq section.section \"常见问题从配对到按键映射的完整步骤见使用指南。打开使用指南 ↗ \""
+   ]
+  },
+  {
+   "check": "one-heading",
+   "where": "h2#faq-title \"常见问题\"",
+   "msg": "headings of two sections show whole on one screen at 4 of 49 scroll positions (8.2%; at scroll 1900, 2300, 2350, 2400px), here with \"两代 Joy-Con 都能接入\": at most 3% on a desktop (SR-5)",
+   "fix": "make the sections one screen tall so their headings sit a screen apart and two never share one",
+   "widths": [
+    1440
+   ],
+   "from": "consistency",
+   "ids": [
+    "one-heading"
+   ],
+   "wheres": [
+    "h2#faq-title \"常见问题\""
+   ]
+  },
+  {
+   "check": "container-edges",
+   "where": "a.skip-link \"跳到正文\"",
+   "msg": "a <a> at the top of the page, outside header.nav, main, footer.closing and nav.actionbar (SR-6)",
+   "fix": "build the page as header.nav, a main of sections (each one in-flow .wrap plus background layers) and footer.closing",
+   "widths": [
+    1440
+   ],
+   "from": "consistency",
+   "ids": [
+    "container-edges"
+   ],
+   "wheres": [
+    "a.skip-link \"跳到正文\""
+   ]
+  },
+  {
+   "check": "container-edges",
+   "where": "header.site-header \"JoyHarness 菜单 功能 手柄支持 使用指南 常见问题 GitHub ☾\"",
+   "msg": "a <header> at the top of the page, outside header.nav, main, footer.closing and nav.actionbar (SR-6)",
+   "fix": "build the page as header.nav, a main of sections (each one in-flow .wrap plus background layers) and footer.closing",
+   "widths": [
+    1440
+   ],
+   "from": "consistency",
+   "ids": [
+    "container-edges"
+   ],
+   "wheres": [
+    "header.site-header \"JoyHarness 菜单 功能 手柄支持 使用指南 常见问题 GitHub ☾\""
+   ]
+  },
+  {
+   "check": "container-edges",
+   "where": "footer.site-footer \"JoyHarness Tokenzz MIT 许可证 反馈问题\"",
+   "msg": "a <footer> at the top of the page, outside header.nav, main, footer.closing and nav.actionbar (and 1 more like it: \"macOS 菜单栏应用 用 Joy-Con操作你\") (SR-6)",
+   "fix": "build the page as header.nav, a main of sections (each one in-flow .wrap plus background layers) and footer.closing",
+   "widths": [
+    1440
+   ],
+   "from": "consistency",
+   "ids": [
+    "container-edges"
+   ],
+   "wheres": [
+    "footer.site-footer \"JoyHarness Tokenzz MIT 许可证 反馈问题\""
+   ]
+  },
+  {
+   "check": "container-edges",
+   "where": "div.hero-visual > div.app-frame > div.window-bar > span:nth-of-type(2) \"JoyHarness\"",
+   "msg": "1 text block starts on a left line at x 954, 858px from the container's left: text starts on the container's left, or on one split line (x 626, 732, 838) (SR-6)",
+   "fix": "start the text on the container's left, or on the one split line every split shares",
+   "widths": [
+    1440
+   ],
+   "from": "consistency",
+   "ids": [
+    "container-edges"
+   ],
+   "wheres": [
+    "div.hero-visual > div.app-frame > div.window-bar > span:nth-of-type(2) \"JoyHarness\""
+   ]
+  },
+  {
+   "check": "split-pair",
+   "where": "main#main > section.hero > div.wrap.hero-inner > div.hero-layout \"macOS 菜单栏应用 用 Joy-Con操作你的 AI 按一下发送消息、切换应\"",
+   "msg": "the two columns of the split start 63px apart at the top (centred on each other): a split's columns are top-aligned, 8px either way (SR-8)",
+   "fix": "top-align both columns of the split (align-items: start)",
+   "widths": [
+    1440
+   ],
+   "from": "consistency",
+   "ids": [
+    "split-pair"
+   ],
+   "wheres": [
+    "main#main > section.hero > div.wrap.hero-inner > div.hero-layout \"macOS 菜单栏应用 用 Joy-Con操作你的 AI 按一下发送消息、切换应\""
+   ]
+  },
+  {
+   "check": "split-pair",
+   "where": "section#features > div.wrap > div.feature-layout \"应用绑定 组合动作 连接与摇杆 按键手势为单击、双击和长按分别绑定快捷键、鼠标动\"",
+   "msg": "the split's left column starts with a picture or a box, not text: text left, the visual right, on every split (SR-8)",
+   "fix": "put the text in the left column and the visual in the right, on every split",
+   "widths": [
+    1440
+   ],
+   "from": "consistency",
+   "ids": [
+    "split-pair"
+   ],
+   "wheres": [
+    "section#features > div.wrap > div.feature-layout \"应用绑定 组合动作 连接与摇杆 按键手势为单击、双击和长按分别绑定快捷键、鼠标动\""
+   ]
+  },
+  {
+   "check": "split-pair",
+   "where": "section#faq > div.wrap.faq-layout \"常见问题从配对到按键映射的完整步骤见使用指南。打开使用指南 ↗ 需要什么样的 M\"",
+   "msg": "the split's columns are off the page's one pair of lines: its right column starts at x 585, the first split's at 631; its right column starts at x 585, on none of the split lines 626 (k=5), 732 (k=6), 838 (k=7) (SR-8)",
+   "fix": "start every split's right column on one shared line (wrap.left + k x (width + 24) / 12, k 5, 6 or 7; 6 on a place page) and end the left one 24px before it",
+   "widths": [
+    1440
+   ],
+   "from": "consistency",
+   "ids": [
+    "split-pair"
+   ],
+   "wheres": [
+    "section#faq > div.wrap.faq-layout \"常见问题从配对到按键映射的完整步骤见使用指南。打开使用指南 ↗ 需要什么样的 M\""
+   ]
+  },
+  {
+   "check": "text-only",
+   "where": "section#faq \"常见问题\"",
+   "msg": "the section is only text: no picture, icon, mock or effect in it (2 sections like it at this width)",
+   "fix": "give the section a visual: a photograph that fits, the real icons, or a UI fragment on a ground",
+   "widths": [
+    390
+   ],
+   "from": "consistency",
+   "ids": [
+    "text-only"
+   ],
+   "wheres": [
+    "section#faq \"常见问题\""
+   ]
+  },
+  {
+   "check": "text-only",
+   "where": "main#main > section.download-section \"下载 JoyHarness\"",
+   "msg": "the closing section is only text: no picture, icon, mock or effect in it (2 sections like it at this width)",
+   "fix": "give the section a visual: a photograph that fits, the real icons, or a UI fragment on a ground",
+   "widths": [
+    390
+   ],
+   "from": "consistency",
+   "ids": [
+    "text-only"
+   ],
+   "wheres": [
+    "main#main > section.download-section \"下载 JoyHarness\""
+   ]
+  },
+  {
+   "check": "edge-left",
+   "where": "section.hero ul.app-list \"ChatGPT Claude Cursor DeepSeek W\"",
+   "msg": "starts at x 590.6; the lines are 96 and the column starts",
+   "fix": "start it on the .wrap left line",
+   "widths": [
+    1440
+   ],
+   "from": "layout",
+   "ids": [
+    "edge-left"
+   ],
+   "wheres": [
+    "section.hero ul.app-list \"ChatGPT Claude Cursor DeepSeek W\""
+   ]
+  },
+  {
+   "check": "edge-left",
+   "where": "#faq div.faq-list \"需要什么样的 Mac？ 目前提供 Apple Silicon（M\"",
+   "msg": "starts at x 585.3; the lines are 96 and the column starts",
+   "fix": "start it on the .wrap left line",
+   "widths": [
+    1440
+   ],
+   "from": "layout",
+   "ids": [
+    "edge-left"
+   ],
+   "wheres": [
+    "#faq div.faq-list \"需要什么样的 Mac？ 目前提供 Apple Silicon（M\""
+   ]
+  },
+  {
+   "check": "edge-right",
+   "where": "footer.site-footer a.brand \"JoyHarness\"",
+   "msg": "ends at x 232; the right line is 1344",
+   "fix": "end it on the .wrap right line",
+   "widths": [
+    1440,
+    390
+   ],
+   "from": "layout",
+   "ids": [
+    "edge-right"
+   ],
+   "wheres": [
+    "footer.site-footer a.brand \"JoyHarness\""
+   ]
+  },
+  {
+   "check": "edge-left",
+   "where": "footer.site-footer nav \"Tokenzz MIT 许可证 反馈问题\"",
+   "msg": "starts at x 1115.7; the lines are 96 and the column starts",
+   "fix": "start it on the .wrap left line",
+   "widths": [
+    1440
+   ],
+   "from": "layout",
+   "ids": [
+    "edge-left"
+   ],
+   "wheres": [
+    "footer.site-footer nav \"Tokenzz MIT 许可证 反馈问题\""
+   ]
+  },
+  {
+   "check": "screen-short",
+   "where": "section.hero section.hero \"macOS 菜单栏应用 用 Joy-Con操作你的 AI 按一下\"",
+   "msg": "829px tall; one screen under the nav is 900px",
+   "fix": "make the section one full screen (--h: 1, layout-v4.md section 2)",
+   "widths": [
+    1440
+   ],
+   "from": "layout",
+   "ids": [
+    "screen-short"
+   ],
+   "wheres": [
+    "section.hero section.hero \"macOS 菜单栏应用 用 Joy-Con操作你的 AI 按一下\""
+   ]
+  },
+  {
+   "check": "screen-height",
+   "where": "#features section.section.feature-section \"一只手柄，多套键位 在 ChatGPT 里发送消息，切到 Cur\"",
+   "msg": "967px, 1.07 screens; a section is exactly one or two (--h)",
+   "fix": "make the section exactly one or two screens (--h: 1 or 2)",
+   "widths": [
+    1440
+   ],
+   "from": "layout",
+   "ids": [
+    "screen-height"
+   ],
+   "wheres": [
+    "#features section.section.feature-section \"一只手柄，多套键位 在 ChatGPT 里发送消息，切到 Cur\""
+   ]
+  },
+  {
+   "check": "screen-short",
+   "where": "#controllers section.section.controller-section \"两代 Joy-Con 都能接入 左右手柄均可独立连接。连了多只手\"",
+   "msg": "699px tall; one screen under the nav is 900px",
+   "fix": "make the section one full screen (--h: 1, layout-v4.md section 2)",
+   "widths": [
+    1440,
+    390
+   ],
+   "from": "layout",
+   "ids": [
+    "screen-short",
+    "screen-height"
+   ],
+   "wheres": [
+    "#controllers section.section.controller-section \"两代 Joy-Con 都能接入 左右手柄均可独立连接。连了多只手\""
+   ]
+  },
+  {
+   "check": "neighbour",
+   "where": "#controllers section.section.controller-section \"两代 Joy-Con 都能接入 左右手柄均可独立连接。连了多只手\"",
+   "msg": "framed, 67px of #faq section.section \"常见问题从配对到按键映射的完整步骤见使用指南。打开使用指南 ↗ \" shows",
+   "fix": "keep the next section's heading and picture out of this screen",
+   "widths": [
+    1440
+   ],
+   "from": "layout",
+   "ids": [
+    "neighbour"
+   ],
+   "wheres": [
+    "#controllers section.section.controller-section \"两代 Joy-Con 都能接入 左右手柄均可独立连接。连了多只手\""
+   ]
+  },
+  {
+   "check": "screen-short",
+   "where": "section.download-section section.download-section \"下载 JoyHarnessApple Silicon · mac\"",
+   "msg": "183px tall; one screen under the nav is 900px",
+   "fix": "make the section one full screen (--h: 1, layout-v4.md section 2)",
+   "widths": [
+    1440,
+    390
+   ],
+   "from": "layout",
+   "ids": [
+    "screen-short"
+   ],
+   "wheres": [
+    "section.download-section section.download-section \"下载 JoyHarnessApple Silicon · mac\""
+   ]
+  },
+  {
+   "check": "screen-height",
+   "where": "section.download-section section.download-section \"下载 JoyHarnessApple Silicon · mac\"",
+   "msg": "183px, 0.20 screens; a section is exactly one or two (--h)",
+   "fix": "make the section exactly one or two screens (--h: 1 or 2)",
+   "widths": [
+    1440,
+    390
+   ],
+   "from": "layout",
+   "ids": [
+    "screen-height"
+   ],
+   "wheres": [
+    "section.download-section section.download-section \"下载 JoyHarnessApple Silicon · mac\""
+   ]
+  },
+  {
+   "check": "sparse",
+   "where": "section.download-section section.download-section \"下载 JoyHarnessApple Silicon · mac\"",
+   "msg": "its content fills 49% of its screen; merge it or give it its visual (0.55 is the aim)",
+   "fix": "fill the section or make it a screen shorter",
+   "widths": [
+    1440
+   ],
+   "from": "layout",
+   "ids": [
+    "sparse"
+   ],
+   "wheres": [
+    "section.download-section section.download-section \"下载 JoyHarnessApple Silicon · mac\""
+   ]
+  },
+  {
+   "check": "neighbour",
+   "where": "section.download-section section.download-section \"下载 JoyHarnessApple Silicon · mac\"",
+   "msg": "framed, 83px of the footer shows",
+   "fix": "keep the next section's heading and picture out of this screen",
+   "widths": [
+    1440,
+    390
+   ],
+   "from": "layout",
+   "ids": [
+    "neighbour"
+   ],
+   "wheres": [
+    "section.download-section section.download-section \"下载 JoyHarnessApple Silicon · mac\""
+   ]
+  },
+  {
+   "check": "hero-fold",
+   "where": "section.hero section.hero \"macOS 菜单栏应用 用 Joy-Con操作你的 AI 按一下\"",
+   "msg": "starts at y 73, not under the nav",
+   "fix": "the hero fills the first screen alone, its button inside it",
+   "widths": [
+    1440,
+    390
+   ],
+   "from": "layout",
+   "ids": [
+    "hero-fold"
+   ],
+   "wheres": [
+    "section.hero section.hero \"macOS 菜单栏应用 用 Joy-Con操作你的 AI 按一下\""
+   ]
+  }
+ ],
+ "waived": [],
+ "warnCount": 20,
+ "at": "2026-11-20T17:31:30.817Z"
+}

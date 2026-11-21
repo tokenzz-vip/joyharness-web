@@ -1,0 +1,11 @@
+{
+ "page": "index.html",
+ "url": null,
+ "root": null,
+ "kind": "software",
+ "category": "Joy-Con 按键映射应用",
+ "primary": "下载 macOS 版",
+ "rounds": 3,
+ "start": "2026-11-20T17:24:31.474Z",
+ "by": "gate.mjs --start"
+}

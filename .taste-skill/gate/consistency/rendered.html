@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="zh-CN" data-type="software" data-theme="light"><head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <meta name="page-type" content="software">
+  <meta name="site-kind" content="software">
+  <meta name="description" content="JoyHarness 是开源的 macOS 菜单栏应用。用 Joy-Con 或 Joy-Con 2 操作 ChatGPT、Claude、Cursor 等应用，按前台应用自动切换键位。">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="JoyHarness — 用 Joy-Con 操作 AI">
+  <meta property="og:description" content="把手柄按键映射成快捷键、鼠标和常用语。适用于 Apple Silicon Mac。">
+  <meta property="og:url" content="https://joyharness.tokenzz.vip/">
+  <meta property="og:image" content="https://joyharness.tokenzz.vip/assets/screens/mapping-light.webp">
+  <meta property="og:image:alt" content="JoyHarness 的 Joy-Con 2 按键映射界面">
+  <meta name="twitter:card" content="summary_large_image">
+  <title>JoyHarness — 用 Joy-Con 操作 AI</title>
+  <link rel="canonical" href="https://joyharness.tokenzz.vip/">
+  <link rel="icon" type="image/png" href="assets/favicon.png">
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer=""></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">跳到正文</a>
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="brand" href="./"><img src="assets/app-icon.webp" alt="" width="36" height="36">JoyHarness</a>
+      <button class="menu-toggle icon-button" type="button" aria-controls="site-nav" aria-expanded="false" hidden="">菜单</button>
+      <nav id="site-nav" class="site-nav" aria-label="主导航">
+        <a href="#features">功能</a>
+        <a href="#controllers">手柄支持</a>
+        <a href="guide.html">使用指南</a>
+        <a href="#faq">常见问题</a>
+      </nav>
+      <div class="header-actions">
+        <a class="github-link" href="https://github.com/tokenzz-vip/JoyHarness">GitHub</a>
+        <button class="theme-toggle icon-button" type="button" aria-label="切换到深色模式" title="切换到深色模式">
+          <span class="theme-moon" aria-hidden="true">☾</span><span class="theme-sun" aria-hidden="true">☼</span>
+        </button>
+        <a class="button button-small" href="https://github.com/tokenzz-vip/JoyHarness/releases/latest/download/JoyHarness-macos-arm64.dmg">下载</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero" aria-labelledby="hero-title" data-enter="">
+      <div class="wrap hero-inner">
+        <div class="hero-layout">
+          <div class="hero-copy">
+            <p class="kicker"><span class="brand-pair" aria-hidden="true"></span> macOS 菜单栏应用</p>
+            <h1 id="hero-title">用 <span class="joy-con">Joy-Con</span><br>操作你的 <span class="hero-accent">AI</span></h1>
+            <p class="hero-description">按一下发送消息、切换应用，或输入常用语。JoyHarness 会按当前应用自动切换手柄键位。</p>
+            <div class="actions">
+              <a class="button" href="https://github.com/tokenzz-vip/JoyHarness/releases/latest/download/JoyHarness-macos-arm64.dmg">下载 macOS 版 <span aria-hidden="true">↓</span></a>
+              <a class="button button-secondary" href="guide.html">查看使用指南 <span aria-hidden="true">↗</span></a>
+            </div>
+            <p class="requirements">Apple Silicon · macOS 15 或更新版本</p>
+          </div>
+          <div class="hero-visual">
+            <div class="app-frame">
+              <div class="window-bar" aria-hidden="true"><span class="window-dots"><i></i><i></i><i></i></span><span>JoyHarness</span></div>
+              <picture>
+                <source media="not all" srcset="assets/screens/mapping-dark.webp">
+                <img src="assets/screens/mapping-light.webp" alt="JoyHarness 中 Joy-Con 2 右手柄的 ChatGPT 按键映射" width="2240" height="1640" fetchpriority="high">
+              </picture>
+            </div>
+          </div>
+        </div>
+        <div class="app-strip">
+          <span class="app-strip-label">内置应用方案</span>
+          <ul class="app-list">
+            <li><img src="assets/app-logos/chatgpt.webp" alt="" width="24" height="24">ChatGPT</li>
+            <li><img src="assets/app-logos/claude.webp" alt="" width="24" height="24">Claude</li>
+            <li><img src="assets/app-logos/cursor.webp" alt="" width="24" height="24">Cursor</li>
+            <li><img src="assets/app-logos/deepseek.webp" alt="" width="24" height="24">DeepSeek</li>
+            <li><img src="assets/app-logos/workbuddy.webp" alt="" width="24" height="24">WorkBuddy</li>
+            <li><img src="assets/app-logos/opencode.png" alt="" width="24" height="24">OpenCode</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section feature-section" id="features" aria-labelledby="features-title">
+      <div class="wrap">
+        <div class="section-intro">
+          <h2 id="features-title">一只手柄，多套键位</h2>
+          <p>在 ChatGPT 里发送消息，切到 Cursor 后用同一只手柄执行编辑操作。你也可以为其他应用添加自己的方案。</p>
+        </div>
+        <div class="feature-layout" data-showcase="">
+          <div class="feature-controls">
+            <div class="tab-list" aria-label="产品界面" role="tablist">
+              <button type="button" id="tab-harnesses" aria-controls="view-harnesses" role="tab" aria-selected="true" tabindex="0">应用绑定</button>
+              <button type="button" id="tab-macros" aria-controls="view-macros" role="tab" aria-selected="false" tabindex="-1">组合动作</button>
+              <button type="button" id="tab-connection" aria-controls="view-connection" role="tab" aria-selected="false" tabindex="-1">连接与摇杆</button>
+            </div>
+            <div class="feature-notes">
+              <article><h3>按键手势</h3><p>为单击、双击和长按分别绑定快捷键、鼠标动作或常用语。</p></article>
+              <article><h3>鼠标模式</h3><p>用摇杆移动光标，调节死区和速度，或切回方向映射。</p></article>
+              <article><h3>组合动作</h3><p>把输入、快捷键和等待步骤连起来，按一次键就能执行。</p></article>
+            </div>
+          </div>
+          <div class="feature-screens">
+            <div class="app-frame" id="view-harnesses" role="tabpanel" aria-labelledby="tab-harnesses" tabindex="0">
+              <picture>
+                <source media="not all" srcset="assets/screens/harnesses-dark.webp">
+                <img src="assets/screens/harnesses-light.webp" alt="JoyHarness 的 Harness 页面，显示各应用的键位方案" width="2240" height="1640" loading="lazy">
+              </picture>
+            </div>
+            <div class="app-frame" id="view-macros" role="tabpanel" aria-labelledby="tab-macros" tabindex="0" hidden="">
+              <picture>
+                <source media="not all" srcset="assets/screens/macros-dark.webp">
+                <img src="assets/screens/macros-light.webp" alt="JoyHarness 的组合动作与步骤编辑界面" width="2240" height="1640" loading="lazy">
+              </picture>
+            </div>
+            <div class="app-frame" id="view-connection" role="tabpanel" aria-labelledby="tab-connection" tabindex="0" hidden="">
+              <picture>
+                <source media="not all" srcset="assets/screens/connection-dark.webp">
+                <img src="assets/screens/connection-light.webp" alt="JoyHarness 的连接与摇杆设置界面" width="2240" height="1640" loading="lazy">
+              </picture>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section controller-section" id="controllers" aria-labelledby="controllers-title">
+      <div class="wrap">
+        <div class="section-intro">
+          <h2 id="controllers-title">两代 Joy-Con 都能接入</h2>
+          <p>左右手柄均可独立连接。连了多只手柄时，由你指定哪只触发映射。</p>
+        </div>
+        <div class="controller-grid">
+          <article class="controller-card controller-first">
+            <h3>Joy-Con</h3>
+            <p>在 macOS 的蓝牙设置配对，然后在 JoyHarness 中选择手柄。首次使用需要辅助功能和输入监控权限。</p>
+            <a class="text-link" href="guide.html#joy-con">连接一代手柄 <span aria-hidden="true">↗</span></a>
+          </article>
+          <article class="controller-card controller-second">
+            <h3>Joy-Con 2</h3>
+            <p>在 JoyHarness 的「连接与摇杆」里扫描配对。首次使用需要蓝牙和辅助功能权限。</p>
+            <a class="text-link" href="guide.html#joy-con-2">连接二代手柄 <span aria-hidden="true">↗</span></a>
+          </article>
+        </div>
+        <p class="compatibility">两代手柄的接入已通过协议测试，实体设备的兼容性仍待完整验证。<a class="text-link" href="https://github.com/tokenzz-vip/JoyHarness/blob/main/docs/behavior.md">查看验证范围</a></p>
+      </div>
+    </section>
+
+    <section class="section" id="faq" aria-labelledby="faq-title">
+      <div class="wrap faq-layout">
+        <div class="section-intro"><h2 id="faq-title">常见问题</h2><p>从配对到按键映射的完整步骤见使用指南。</p><a class="text-link" href="guide.html">打开使用指南 <span aria-hidden="true">↗</span></a></div>
+        <div class="faq-list">
+          <details>
+            <summary>需要什么样的 Mac？</summary>
+            <p>目前提供 Apple Silicon（M 系列芯片）版，系统要求 macOS 15 或更新版本。</p>
+          </details>
+          <details>
+            <summary>手柄显示已连接，为什么按键没反应？</summary>
+            <p>检查顶部设备菜单是否选中了这只手柄，并确认「启用手柄映射」及系统辅助功能权限。一代手柄还需要输入监控权限。授权后按系统提示重新打开 JoyHarness。</p>
+          </details>
+          <details>
+            <summary>连接多只手柄之后怎么切换？</summary>
+            <p>打开顶部设备菜单、菜单栏或「连接与摇杆」，选择要用的那只手柄。切换后先松开按键并让摇杆回中，再开始操作。</p>
+          </details>
+          <details>
+            <summary>Joy-Con 2 的 C 键能触发语音输入吗？</summary>
+            <p>可以把 C 键映射为语音输入工具的快捷键，由该工具使用 Mac 或外接麦克风收音。</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="download-section" aria-labelledby="download-title">
+      <div class="wrap download-layout">
+        <div><h2 id="download-title">下载 JoyHarness</h2><p>Apple Silicon · macOS 15 或更新版本</p></div>
+        <div class="actions">
+          <a class="button" href="https://github.com/tokenzz-vip/JoyHarness/releases/latest/download/JoyHarness-macos-arm64.dmg">下载 DMG <span aria-hidden="true">↓</span></a>
+          <a class="button button-secondary" href="https://github.com/tokenzz-vip/JoyHarness/releases">查看版本记录 <span aria-hidden="true">↗</span></a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer-inner">
+      <a class="brand" href="./"><img src="assets/app-icon.webp" alt="" width="32" height="32">JoyHarness</a>
+      <nav aria-label="页脚导航">
+        <a href="https://tokenzz.vip">Tokenzz</a>
+        <a href="https://github.com/tokenzz-vip/JoyHarness/blob/main/LICENSE">MIT 许可证</a>
+        <a href="https://github.com/tokenzz-vip/JoyHarness/issues">反馈问题</a>
+      </nav>
+    </div>
+  </footer>
+
+
+</body></html>
